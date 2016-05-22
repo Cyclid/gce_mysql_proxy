@@ -7,6 +7,10 @@
 require 'spec_helper'
 
 describe 'gce_mysql_proxy::default' do
+  before do
+    stub_command('mount | grep /cloudsql >/dev/null')
+  end
+
   context 'When all attributes are default, on a 64bit platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new do |node, _server|
