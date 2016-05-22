@@ -1,2 +1,3 @@
 #!/bin/bash
+exec 2>&1
 <%= @options[:bindir] %>/cloud_sql_proxy -dir=<%= @options[:mountdir] %> <%= @options[:mode] %> <%= @options[:credentials] %>

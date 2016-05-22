@@ -24,4 +24,5 @@ options[:credentials] = "-credential_file=#{node['gce_mysql_proxy']['credentials
 runit_service 'cloud_sql_proxy' do
   default_logger true
   options(options.merge(params))
+  sv_timeout 20
 end
