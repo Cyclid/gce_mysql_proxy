@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package_url = case node['kernel']['processor']
+package_url = case node['kernel']['machine']
               when 'x86_64'
                 "#{node['gce_mysql_proxy']['package_url']}.amd64"
               when 'i386', 'i686'

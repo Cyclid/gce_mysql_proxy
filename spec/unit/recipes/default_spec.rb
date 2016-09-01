@@ -14,7 +14,7 @@ describe 'gce_mysql_proxy::default' do
   context 'When all attributes are default, on a 64bit platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new do |node, _server|
-        node.automatic['kernel']['processor'] = 'x86_64'
+        node.automatic['kernel']['machine'] = 'x86_64'
       end
       runner.converge(described_recipe)
     end
@@ -27,7 +27,7 @@ describe 'gce_mysql_proxy::default' do
   context 'When all attributes are default, on a 32bit platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new do |node, _server|
-        node.automatic['kernel']['processor'] = 'i686'
+        node.automatic['kernel']['machine'] = 'i686'
       end
       runner.converge(described_recipe)
     end
