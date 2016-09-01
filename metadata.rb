@@ -5,6 +5,6 @@ license 'Apache v2.0'
 source_url 'https://github.com/Liqwyd/gce_mysql_proxy'
 description 'Installs & configure a GCE MySQL proxy'
 long_description 'Installs and configures the Google Compute Engine MySQL proxy'
-version '0.1.0'
+version '0.1.1'
 
 depends 'runit', '~> 1.7.6'
